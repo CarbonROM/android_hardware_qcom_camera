@@ -1,3 +1,6 @@
+ifeq ($(call my-dir),$(call project-path-for,qcom-camera))
+
+ifneq ($(strip $(USE_DEVICE_SPECIFIC_CAMERA)),true)
 # TODO:  Find a better way to separate build configs for ADP vs non-ADP devices
 ifneq ($(SONY_AOSP),true)
   ifneq ($(TARGET_BOARD_AUTO),true)
@@ -12,4 +15,7 @@ ifneq ($(SONY_AOSP),true)
       endif
     endif
   endif
+endif
+endif
+
 endif
