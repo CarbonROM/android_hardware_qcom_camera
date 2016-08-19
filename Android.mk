@@ -1,4 +1,4 @@
-ifneq ($(USE_SONY_CAMERA),true)
+ifneq ($(SONY_AOSP),true)
 ifneq ($(filter msm8992 msm8994,$(TARGET_BOARD_PLATFORM)),)
   ifneq ($(strip $(USE_CAMERA_STUB)),true)
     ifneq ($(BUILD_TINY_ANDROID),true)
